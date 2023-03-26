@@ -1,36 +1,140 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta name="author" content="CheEmeT" />
-        <meta name="description" content="My attempt to create usefull todo manager." />
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
+<head>
+    <meta name="author" content="CheEmeT" />
+    <meta name="description" content="My attempt to create usefull todo manager." />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
 
-        <!-- Setting up an image to display in title-->
-        <link rel="icon" href="favicon.png" type="image/x-icon" />
-        <link rel="stylesheet" href="styles/style.css" />
+    <!-- Setting up an image to display in title-->
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
+   
+    <!-- Css stuff -->
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="styles/section-input.css" />
+    <link rel="stylesheet" href="styles/working-area.css" />
 
-        <!-- Using fonts from google's font api-->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic,bold" />
+    <!-- Using fonts from google's font api-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic,bold" />
 
-        <!-- Scripts -->
-        <script src="scripts/script.js" defer></script>
+    <!-- Scripts -->
+    <script src="scripts/script.js" defer></script>
 
-        <title>To do list</title>
-    </head>
-    <body >
+    <title>To do list</title>
+</head>
+<body>
+    <div class="page-div">
         <section class="section-input">
-            <img class="section-input-prefix-img" src="images/pointer.png" draggable="false"/>
+            <img class="section-input-prefix-img" src="images/pointer.png" draggable="false" />
             <input type="text" class="input-todo" placeholder="Write your task here" />
             <footer class="section-footer">
                 <p class="section-footer-p">Double click to edit task</p>
                 <p class="section-footer-p">Click to open subtasks</p>
             </footer>
         </section>
-        <section class="section-folders">
-            <div class="folder-div">
-                <label class="folder-label">default</label>
+        <div class="working-area-div">
+            <section class="section-folders">
+                <!-- Example of folder -->
+                <div class="folder-div">
+                    <label class="folder-label">default</label>
+                </div>
+            </section>
+            <div class="todo-list-div">
+                <ul class="todo-list-ul">
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                    <li>
+                        <label class="todo-checkbox-representation-label" for="123">
+                            <input class="checkbox-input" type="checkbox" id="123" />
+                            <span class="todo-checkbox-representation-span"></span>
+                        </label>
+                        <span class="todo-task-span">--------------------------------------------------------</span>
+                        <input type="button" class="todo-task-remove-button" value="&#10006;"/>
+                    </li>
+                </ul>
             </div>
-        </section>
-    </body>
+        </div>
+    </div>
+</body>
 </html>
