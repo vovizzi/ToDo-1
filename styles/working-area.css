@@ -23,6 +23,7 @@
     margin: 0;
     margin-left: 2px;
     background: #ffffff;
+    border-radius: 4px;
 }
 
 .folder-label {

@@ -18,14 +18,18 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:italic,bold" />
 
     <!-- Scripts -->
+    <script src="scripts/classes.js" defer></script>
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/onLoadEventListeners.js" defer></script>
 
     <title>To do list</title>
 </head>
 <body>
     <div class="page-div">
         <section class="section-input">
-            <img class="section-input-prefix-img" src="images/pointer.png" draggable="false" />
+            <div class="section-input-prefix-div effect-hover" src="images/pointer.png" draggable="false">
+                <span class="section-input-prefix-span">&#10093;</span>
+            </div>
             <input type="text" class="input-todo" placeholder="Write your task here" />
             <footer class="section-footer">
                 <p class="section-footer-p">Double click to edit task</p>
@@ -35,20 +39,20 @@
         <div class="working-area-div">
             <section class="section-folders">
                 <!-- Example of folder -->
-                <div class="folder-div">
+                <!--<div class="folder-div effect-hover">
                     <label class="folder-label">default</label>
-                </div>
+                </div>-->
             </section>
             <div class="todo-list-div">
                 <ul class="todo-list-ul">
-                    <li>
+                    <!--<li>
                         <label class="todo-checkbox-representation-label" for="123">
                             <input class="checkbox-input" type="checkbox" id="123" />
                             <span class="todo-checkbox-representation-span"></span>
                         </label>
                         <span class="todo-task-span">example</span>
                         <input type="button" class="todo-task-remove-button" value="&#10006;"/>
-                    </li>
+                    </li>-->
                 </ul>
             </div>
         </div>
