@@ -24,3 +24,5 @@ docTaskTextInput.addEventListener("keydown", (event) => {
         docTaskTextInput.value = "";
     }
 })
+
+// suck
