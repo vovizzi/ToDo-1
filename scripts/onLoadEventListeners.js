@@ -10,6 +10,8 @@ docTaskTextInput.addEventListener("keydown", (event) => {
             currentFolder.removeTask(newTask);
         });
 
+
+
         docTaskTextInput.value = "";
     }
 })

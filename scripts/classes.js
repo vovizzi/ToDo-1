@@ -62,6 +62,10 @@ class Task {
 
     }
 
+    //Returns object with fields
+    //  main - Root DOM element of task representation
+    //  checkbox - DOM element that refers to a checkbox
+    //  crossButton - button in the top-right corner
     static createDocListElement(task) {
         const docLi = document.createElement("li")
 

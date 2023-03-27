@@ -26,6 +26,7 @@
 
 .section-input-prefix-span {
     font-size: 1.25em;
+    cursor: default;
     transition: transform 0.2s;
 }
 
