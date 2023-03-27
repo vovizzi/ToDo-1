@@ -3,11 +3,14 @@ const docTaskList = document.querySelector(".todo-list-ul");
 const docFolders = document.querySelector(".section-folders");
 const docTaskTextInput = document.querySelector(".input-todo");
 
+const idGenerator = new UniqueGen();
 let folders = [];
 let currentFolder;
 
-addFolder(new Folder("Tasks"));
-addFolder(new Folder("Shopping"));
+addFolder(new Folder("Tasks", idGenerator));
+addFolder(new Folder("Shopping", idGenerator));
+addFolder(new Folder("Cleaning", idGenerator));
+addFolder(new Folder("Work", idGenerator));
 
 currentFolder = folders[0];
 

@@ -3,6 +3,8 @@ for (let i = 0; i < folders.length; i++) {
     docFolders.appendChild(folders[i].doc.main);
 }
 
+docFolders.querySelector("input[type=\"radio\"]").setAttribute("checked", "");
+
 docTaskTextInput.addEventListener("keydown", (event) => {
     //console.log(event.keyCode);
     if (event.keyCode === 13) {

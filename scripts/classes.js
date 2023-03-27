@@ -15,10 +15,11 @@ class UniqueGen {
 }
 
 class Folder {
-    constructor(name) {
+    constructor(name, idGenerator) {
         this.name = name;
         this.tasks = [];
-        this.idgen = new UniqueGen();
+        this.idgen = idGenerator;
+        this.id = this.idgen.getUnique();
         this.doc = Folder.createDocFolderElement(this);
     }
 
@@ -35,18 +36,28 @@ class Folder {
     }
 
     static createDocFolderElement(folder) {
-        const docDiv = document.createElement("div");
-        docDiv.classList.add("folder-div", "effect-hover");
+        const docMain = document.createElement("label");
+        docMain.classList.add("folder-radio-representation-label");
+        docMain.setAttribute("for", folder.id.toString());
 
-        const docDivLabel = document.createElement("label");
-        docDivLabel.classList.add("folder-label");
+        const docInputRadio = document.createElement("input");
+        docInputRadio.setAttribute("type", "radio");
+        docInputRadio.setAttribute("id", folder.id.toString());
+        docInputRadio.setAttribute("name", "folder");
+        docInputRadio.classList.add("folder-radio");
 
-        const docDivLabelText = document.createTextNode(folder.name);
-        docDivLabel.appendChild(docDivLabelText);
-        docDiv.appendChild(docDivLabel);
+        const docSpan = document.createElement("span");
+        docSpan.classList.add("folder-radio-representation-span", "effect-hover");
+
+        const docSpanText = document.createTextNode(folder.name);
+
+        docSpan.appendChild(docSpanText);
+
+        docMain.append(docInputRadio, docSpan);
+
 
         return {
-            main: docDiv,
+            main: docMain,
         };
     }
 
@@ -57,7 +68,7 @@ class Task {
     constructor(text, id) {
         this.text = text;
         this.id = id;
-        this.isComplited = false;
+        this.isCompleted = false;
         this.doc = Task.createDocListElement(this);
 
     }
