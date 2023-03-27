@@ -7,7 +7,7 @@ docFolders.querySelector("input[type=\"radio\"]").setAttribute("checked", "");
 
 docTaskTextInput.addEventListener("keydown", (event) => {
     //console.log(event.keyCode);
-    if (event.keyCode === 13) {
+    if (event.keyCode === 13 && docTaskTextInput.value.length > 0) {
         let newTask = currentFolder.addTask(docTaskTextInput.value);
         docTaskList.appendChild(newTask.doc.main);
         newTask.doc.crossButton.addEventListener("click", (event) => {
